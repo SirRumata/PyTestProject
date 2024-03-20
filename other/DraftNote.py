@@ -35,3 +35,14 @@
 """ЧЕРНОВИЧОК"""
 # wait = WebDriverWait(browser, 10) # ожидание 1 секунда
 # driver.quit() # закрытие окон после тестов
+
+"""ГИТ"""
+# git init
+# git config --global user.name "Your Name"
+# git config --global user.email "you@example.com"
+# git clone https://github.com/your-username/your-repo.git -b main
+# git remote add origin https://github.com/your-username/your-repo.git
+# git pull
+# git add .
+# git commit -m "Initial commit"
+# git push -u origin master
