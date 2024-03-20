@@ -1,5 +1,5 @@
 # адрес
-data_web_adres = "https://www.saucedemo.com/"
+data_web_adress_saucedemo = "https://www.saucedemo.com/"
 # юзеры
 data_standard_user = "standard_user"
 data_locked_out_user = "locked_out_user"

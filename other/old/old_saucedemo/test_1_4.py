@@ -7,7 +7,7 @@ from test_saucedemo.test_data import *
 
 @pytest.fixture
 def browser():
-    gecko_path = r"../../../config/geckodriver.exe"
+    gecko_path = r"../../../config/webdrivers/geckodriver.exe"
     web_service = Service(gecko_path)
     driver = webdriver.Firefox(service=web_service)
     yield driver
@@ -16,7 +16,7 @@ class TestSaucedemo:
     @pytest.fixture
     def login(self, browser):
         """Вход"""
-        browser.get(data_web_adres)
+        browser.get(data_web_adress_saucedemo)
         selenium_helper = SeleniumAction(browser)
         SeleniumAction.action_fill_input_static(browser, locator_field_user_name, data_standard_user)
 #        input_field_user = browser.find_element(*locator_field_user_name)

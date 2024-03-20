@@ -1,10 +1,11 @@
-from config.config_bankxyz import *
+from config.config import *
 from test_bankxyz.locator import *
 from test_bankxyz.data import *
 
 @pytest.fixture
 def login_bank_customer(browser, selenium_action): # pytest -k login test_step.py
     def login_bank_customer_function():
+        browser.get(data_web_adress_bankxyz)
         selenium_action.action_click_element(locator_button_login_customer)
     yield login_bank_customer_function
 
@@ -81,6 +82,7 @@ def transaction(browser, selenium_action):
 @pytest.fixture
 def login_bank_manager(browser, selenium_action):
     def login_bank_manager_function():
+        browser.get(data_web_adress_bankxyz)
         selenium_action.action_click_element(locator_button_login_bank_manager)
     yield login_bank_manager_function
 

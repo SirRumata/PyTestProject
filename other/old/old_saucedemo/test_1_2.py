@@ -7,7 +7,7 @@ from test_saucedemo.locator import *
 
 @pytest.fixture
 def browser():
-    gecko_path = r"../../../config/geckodriver.exe"
+    gecko_path = r"../../../config/webdrivers/geckodriver.exe"
     service = Service(gecko_path)
     driver = webdriver.Firefox(service=service)
     yield driver
@@ -15,7 +15,7 @@ def browser():
 
 @pytest.fixture
 def login(browser):
-    browser.get(data_web_adres)
+    browser.get(data_web_adress_saucedemo)
     selenium_helper = SeleniumAction(browser)
     selenium_helper.action_click_element(locator_field_user_name)
     input_locator_user = (locator_field_user_name)

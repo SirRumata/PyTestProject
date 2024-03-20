@@ -11,7 +11,7 @@ class TestSaucedemoChecks(unittest.TestCase):
         """Настройка перед выполнением каждого теста"""
         current_dir = Path(__file__).resolve().parent
         project_root = current_dir.parent
-        gecko_path = project_root / "config" / "geckodriver.exe"
+        gecko_path = project_root / "config" / "webdrivers" / "geckodriver.exe"
         web_service = Service(gecko_path)
         self.browser = webdriver.Firefox(service=web_service)
         self.browser.get("https://www.saucedemo.com/")
